@@ -92,7 +92,7 @@ public class UserDaoHibernateImpl implements UserDao {
             return session.createQuery("FROM User", User.class).list();
         } catch (Exception e) {
             e.printStackTrace();
-            return null;
+            return List.of();
         }
     }
 
